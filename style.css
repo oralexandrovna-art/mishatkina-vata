@@ -1,0 +1,128 @@
+:root{--pink:#ffaece;--rose:#ffd0e4;--blue:#b8dcff;--lilac:#dcc8f8;--accent:#fff2a6;--ink:#321e40;--plum:#532964;--purple:#65367d;--paper:#fff9fc;--line:#a777ab55;--display:"Baskerville Old Face",Georgia,serif;--body:"Segoe UI",system-ui,sans-serif;--radius:22px;font:16px/1.52 var(--body);color:var(--ink);background:var(--paper)}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at 13% 16%,#ffaece8c,transparent 53%),radial-gradient(ellipse at 88% 41%,#b8dcff8a,transparent 55%),radial-gradient(ellipse at 40% 87%,#dcc8f8b0,transparent 58%),radial-gradient(ellipse at 67% 7%,#fff2a695,transparent 43%),linear-gradient(#fff9fc42,#fff9fc59),url("assets/clouds.jpg") center/cover no-repeat;pointer-events:none}
+body{margin:0 auto;max-width:1240px;padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+a{color:inherit;text-underline-offset:.18em}a,button,summary{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid var(--purple);outline-offset:3px}
+h1,h2,h3,p,blockquote,figure{margin:0}h2,h3{font-family:var(--display);color:var(--plum);line-height:1.16}h2{font-size:clamp(30px,4.5vw,53px);font-weight:400;margin-bottom:.5em;text-wrap:balance}h3{font-size:clamp(20px,2.4vw,29px);font-weight:400;margin-bottom:.3em}button,input,textarea,select{font:inherit}img,video{max-width:100%}button,summary{cursor:pointer}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px;position:sticky;top:0;z-index:5;padding:8px clamp(8px,3vw,30px);background:transparent}
+.brand{display:flex;align-items:center;gap:5px;text-decoration:none;font-weight:800;font-size:13px;line-height:1.05;color:var(--plum)}.brand img{width:28px;height:28px}.header-flips{display:flex;gap:5px;align-items:center}.header-flips .flip{max-width:150px}.flip{position:relative}.flip summary{list-style:none;display:grid;place-items:center;min-height:40px;border-radius:13px;background:var(--purple);color:white;text-align:center;padding:5px 8px;font-weight:700;font-size:12px;line-height:1.14}.flip summary::-webkit-details-marker,#menu summary::-webkit-details-marker{display:none}.flip summary span+span,.flip[open] summary span:first-child{display:none}.flip[open] summary span+span{display:block}.contact-flip[open] summary{position:absolute;right:1px;padding:3px;min-width:22px;background:transparent}.contact-flip>a{display:grid;text-align:center;align-content:center;min-height:40px;padding:4px 25px 4px 6px;border-radius:13px;background:var(--purple);color:white;font-size:11px;line-height:1.15;white-space:nowrap}.contact-flip>a span+span{font-weight:750}
+.refined-header{
+  min-height:58px;gap:clamp(4px,1vw,12px);background:#fff6f7ee;
+  border-bottom:1px solid #a777ab54;
+}
+@supports (backdrop-filter:blur(8px)){
+  .refined-header{background:#fff6f7bf;backdrop-filter:blur(12px)}
+}
+.refined-header .brand{
+  flex:none;font-family:Manrope,"Segoe UI",system-ui,sans-serif;font-weight:600;
+}
+.refined-header .brand img{display:block;width:clamp(23px,6vw,32px);height:auto}
+.refined-header .header-flips{gap:4px;justify-content:center}
+.refined-header .flip summary,.refined-header .contact-flip>a{
+  min-height:44px;border:1px solid #9463aa75;border-radius:10px;
+  color:var(--ink);background:#fff9fcab;font-weight:650;padding-inline:6px;
+}
+.refined-header .flip summary:hover,.refined-header .contact-flip>a:hover{background:#f1e4fa}
+.refined-header .contact-flip>a{padding-inline:5px 22px}
+.refined-header .contact-flip[open] summary{border:0;background:transparent;padding-inline:3px}
+.refined-header #menu summary{
+  display:grid;place-items:center;width:38px;min-height:44px;padding:0;
+  font-size:0;
+}
+.refined-header #menu summary::before{
+  content:"";width:16px;height:1.5px;background:currentColor;box-shadow:0 -5px currentColor,0 5px currentColor;
+}
+@media(min-width:768px){.refined-header{min-height:68px}}
+@media(max-width:365px){
+  .refined-header .brand{font-size:12px}
+  .refined-header .header-flips .flip{max-width:115px}
+  .refined-header #menu summary{width:32px}
+}
+#menu summary{list-style:none;padding:5px 9px;color:var(--plum);font-size:21px}nav{position:absolute;right:10px;top:100%;display:grid;border:1px solid var(--line);border-radius:16px;background:var(--paper);padding:8px;box-shadow:0 12px 32px #53296426;max-height:75vh;overflow:auto}nav a{padding:7px 12px;text-decoration:none}nav a:hover{background:var(--lilac)}
+main>section,.agency{padding:clamp(17px,4vw,44px) clamp(14px,5vw,62px);scroll-margin-top:65px}
+main>section:is(#partners,#prices,#reviews,#booking)::before{content:"";display:block;width:110px;height:19px;margin-bottom:10px;background:url("assets/carnival-flourish.svg") center/contain no-repeat}
+.intro{padding-top:clamp(14px,3vw,38px)}.intro-cover{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,33%);align-items:center;gap:clamp(6px,3vw,36px)}.intro-host,.section-host,.audience-figure,.partner-row>img{display:block;width:100%;height:auto;object-fit:contain}.intro-host{max-height:470px}.balloon-title img{display:block;width:100%;height:auto;max-width:585px}
+.carnival-title {
+  position:relative;isolation:isolate;text-align:center;width:min(100%,560px);
+  padding:clamp(10px,2vw,27px) clamp(3px,1.4vw,18px);
+  border:1px solid #ab73978c;border-radius:49% 49% 12px 12px / 15px 15px 12px 12px;
+  background:radial-gradient(ellipse,#fff7d9d9 18%,#fff4dd85 62%,transparent 100%);
+  font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-synthesis:none;
+  font-size:clamp(27px,7.6vw,48px);line-height:1.02;letter-spacing:-.048em;
+}
+.carnival-title span{display:block;color:#944467}
+.carnival-title span+span{font-size:.91em;color:#78568d;margin-top:.025em}
+.intro-copy:has(.carnival-title)::before{margin-inline:auto}@media(min-width:1200px){.intro-copy:has(.carnival-title)::before{margin-inline:0;margin-left:195px}}
+.intro-cover:has(.carnival-title) .intro-note{font-size:1rem}
+@media(min-width:650px){.carnival-title{font-size:clamp(45px,6.3vw,81px)}}.intro-note{margin-top:clamp(10px,2vw,24px);border-left:1px solid var(--purple);padding-left:clamp(7px,1.5vw,17px)}.intro-label{color:var(--plum);font-weight:750;font-size:clamp(13px,1.65vw,19px)}.intro-description{font-size:clamp(13px,2vw,21px)}.intro>p{margin-top:7px}.from,.price{font-weight:800;color:var(--plum)}.rating{display:inline-block;margin-top:9px;font-size:.85rem;font-weight:700}.rating-stars,.stars{color:var(--accent);-webkit-text-stroke:.7px #795727;letter-spacing:1px}
+.hero-actions,.social-links,.booking-promises{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}.cta,.more,.social-button,.booking-phone,.gallery-vk span{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:42px;padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--accent);color:var(--ink);font-weight:750;font-size:.88rem;text-decoration:none;text-align:center;line-height:1.2}.cta:hover{background:#ffe98c}.secondary,.booking-phone{background:var(--lilac)}.secondary:hover,.booking-phone:hover{background:var(--rose)}.more,.social-button,.gallery-vk span{background:var(--purple);color:white}.more{margin-top:8px}.social-icon{width:19px;height:19px;flex:none}
+.bottom-book{position:fixed;z-index:4;inset:auto 0 0;display:flex;justify-content:center;padding:8px 13px calc(8px + env(safe-area-inset-bottom));pointer-events:none}.bottom-book .cta{pointer-events:auto;width:min(100%,360px);box-shadow:0 5px 20px #53296448}
+ .perks,.plans,.audience-cards,.format-grid,.booking-steps,.show-flow,.case-grid{display:grid;gap:10px}.audience-cards,.booking-steps,.booking-promises,.show-flow{margin:0;padding:0;list-style:none}.plan,.format-grid article,.audience-cards li, .perks article,.booking-steps li,.review,#faq details,#region details,.show-flow li,.booking-contact,form,.case-card,#video{border:1px solid var(--line);border-radius:var(--radius);padding:clamp(10px,2vw,22px);background:var(--paper);min-width:0}.plan,.format-grid article{background:linear-gradient(145deg,var(--paper),var(--rose))}.plan:nth-child(2),.format-grid article:nth-child(2){background:linear-gradient(145deg,var(--paper),var(--lilac))}.plan:nth-child(3){background:linear-gradient(145deg,var(--paper),var(--blue))}.plan{position:relative;display:flex;flex-direction:column;gap:8px;border-radius:48% 48% 12px 12px / 27px 27px 12px 12px;padding:clamp(21px,3vw,38px) clamp(15px,2.4vw,29px) clamp(15px,2.4vw,26px);outline:1px solid var(--line);outline-offset:-5px}.plan .cta{align-self:flex-start;margin-top:auto}.price{font:400 clamp(30px,3.5vw,44px)/1 var(--display);font-variant-numeric:lining-nums tabular-nums}
+.partner-layout,.audience-layout,.host-section{display:grid;gap:12px;align-items:center}.partner-layout{margin-top:12px}.partner-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,24%);align-items:center;gap:8px}.partner-row-left{grid-template-columns:minmax(0,24%) minmax(0,1fr)}.partner-row>img{max-height:315px}.section-host{max-height:320px}.host-section{grid-template-columns:minmax(0,1fr) minmax(0,23%)}#reviews.host-section{grid-template-columns:minmax(0,23%) minmax(0,1fr)}#reviews .section-host{grid-area:1/1}#reviews .host-section-content{grid-area:1/2}.audience-figure{max-width:290px;justify-self:center}.audience-top{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}.audience-top span,.booking-promises li{background:var(--lilac);color:var(--plum);border-radius:99px;padding:3px 8px;font-size:.8rem;font-weight:700}
+.gallery{margin-top:12px}.gallery-track{position:relative;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}.gallery-slide{flex:0 0 100%;min-width:0;height:clamp(190px,65vw,370px);scroll-snap-align:start;border:0;background:transparent;padding:0}.gallery-slide img{display:block;width:100%;height:100%;object-fit:contain}.gallery-slide[data-photo]{cursor:zoom-in}.gallery-vk{display:grid;place-items:center;background:linear-gradient(135deg,var(--rose),var(--lilac));border-radius:var(--radius);text-decoration:none;padding:8px}.gallery-controls,.photo-tools,.dots{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:8px}.gallery-controls button,.photo-tools button,.dots button{border:0;border-radius:13px;background:var(--purple);color:white;min-width:42px;min-height:42px;font-weight:700}.gallery-controls button,.photo-tools button{font-size:22px}.gallery-controls button:disabled{opacity:.45;cursor:default}.dots button{min-width:34px;min-height:34px;background:var(--lilac);color:var(--plum)}.dots button[aria-pressed=true]{background:var(--purple);color:white}.author,.notice,.gallery-count,small{font-size:.85rem;color:var(--plum)}
+#photo{border:0;background:transparent;color:white;padding:0;max-width:calc(100vw - 24px);max-height:calc(100dvh - 20px)}#photo img{display:block;width:auto;height:auto;max-height:calc(100dvh - 80px);margin-inline:auto}.photo-tools{margin:0 0 7px}dialog::backdrop{background:#281432e8}#video{width:calc(100% - 28px);margin:10px auto;background:linear-gradient(135deg,var(--paper),var(--lilac));display:grid;gap:12px}video{display:block;width:100%;max-height:480px;border-radius:15px;background:var(--ink)}
+.agency .flip summary{background:var(--lilac);color:var(--plum);font-size:1rem}#faq details+details{margin-top:6px}#faq details p,#region details p{margin-top:6px}#faq summary,#region summary{color:var(--plum);font-weight:700}.region-pin{vertical-align:middle;margin-right:5px;color:var(--purple)}
+.booking-contact{background:linear-gradient(115deg,var(--rose),var(--lilac))}.booking-contact-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}.booking-contact h2{margin:0}.booking-guide{margin-top:14px}.booking-invitation{margin-bottom:9px}.booking-steps li{display:flex;gap:9px}.booking-steps li>span{border-radius:10px;background:var(--accent);align-self:start;padding:3px 10px;font-weight:800}
+form{display:grid;gap:10px;margin:15px 0 0;max-width:750px}label{display:grid;gap:3px}input,select,textarea{width:100%;min-width:0;color:var(--ink);border:1px solid var(--line);border-radius:9px;background:white;padding:8px}.consent{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start}.consent input{width:auto;accent-color:var(--purple)}
+@media(min-width:650px){.format-grid,.case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-slide{flex-basis:calc((100% - 10px)/2);height:280px}.show-flow,.plans,.booking-steps{grid-template-columns:repeat(3,minmax(0,1fr))}.intro-cover{grid-template-columns:minmax(0,1fr) minmax(0,38%)}#video{grid-template-columns:minmax(0,.65fr) minmax(0,1fr);align-items:center}.audience-layout{grid-template-columns:minmax(0,1fr) minmax(0,28%)}}
+@media(min-width:950px){.gallery-slide{flex-basis:calc((100% - 20px)/3)}.partner-row  .perks{grid-template-columns:repeat(3,minmax(0,1fr))}.header-flips .flip{max-width:none}.flip summary{min-width:130px}.contact-flip[open] summary{min-width:22px}.brand{font-size:16px}}
+@media(max-width:365px){.brand img{display:none}.flip summary{font-size:11px}.hero-actions .cta{font-size:12px;padding-inline:9px}}
+@media(prefers-reduced-motion:no-preference){.cta,.social-button{transition:background-color .18s ease}}
+main > #reviews::before{grid-column:1/-1;margin-bottom:0}#reviews .section-host{grid-area:2/1}#reviews .host-section-content{grid-area:2/2}.host-section-content,.intro-copy,.header-flips{min-width:0}
+
+/* An airy vignette, separate from the original cutouts and photos. */
+.intro-cover::before {
+  content:"";position:absolute;inset:-12% 0;z-index:-1;mask-image:radial-gradient(ellipse closest-side,#000 38%,transparent 100%);pointer-events:none;
+  background:radial-gradient(ellipse at 68% 49%,#fff2a6a3,transparent 50%),
+             radial-gradient(ellipse at 85% 45%,#ffd0e4bc,transparent 56%);
+}
+.intro-copy::before {
+  content:"";display:block;width:clamp(88px,23%,170px);aspect-ratio:220/38;margin:0 0 5px 2px;
+  background:url("assets/carnival-flourish.svg") center/contain no-repeat;
+}
+.intro-cover::after {
+  content:"";position:absolute;right:0;top:12%;width:clamp(15px,3.5vw,44px);aspect-ratio:1;pointer-events:none;
+  background:url("assets/carnival-star.svg") center/contain no-repeat;
+}
+main > #partners,main > #formats,main > #booking {
+  background:radial-gradient(ellipse closest-side at 36% 50%,#ffd0e497,transparent 100%);
+}
+main > #show,main > #venue { background:radial-gradient(ellipse closest-side at 70% 50%,#b8dcff88,transparent 100%); }
+main > #prices,main > #reviews { background:radial-gradient(ellipse closest-side at 54% 50%,#dcc8f896,transparent 100%); }
+.plan::before {
+  content:"";display:block;width:17px;height:17px;margin:0 auto 1px;
+  background:url("assets/carnival-star.svg") center/contain no-repeat;
+}
+.plan h3,.plan .price{text-align:center}
+.plan .cta{align-self:center}
+.booking-contact,#video,.case-card{
+  background-image:url("assets/carnival-corner.svg"),linear-gradient(115deg,#fff9fc,#ffd0e4);
+  background-size:38px auto,auto;background-position:5px 5px,center;background-repeat:no-repeat;
+  border-radius:13px 30px 13px 30px;
+}
+.booking-contact,#video{outline:1px solid var(--line);outline-offset:-5px}
+.booking-contact{padding:clamp(16px,3vw,30px)}
+.perks article,#faq details,.audience-cards li {border-radius:4px 17px 4px 17px;background:#fff9fce8}
+.perks h3{overflow-wrap:anywhere;font-size:clamp(19px,2vw,25px)}.perks article:nth-child(2n),.audience-cards li:nth-child(2n){background:#f7edffed}
+.review{border-radius:5px 26px 5px 26px;border-inline-start:3px double var(--purple)}
+.review blockquote{font-family:var(--display);font-size:clamp(20px,2.5vw,28px);line-height:1.28}
+.gallery-slide[data-photo] {outline:1px solid var(--line);outline-offset:-1px;}
+.gallery-slide:focus-visible {outline:3px solid var(--purple);outline-offset:-4px}
+.cta,.more,.social-button,.gallery-vk span{border-radius:7px 18px 7px 18px}
+@media (max-width:649px){.partner-row .perks{gap:6px}.partner-row .perks h3{font-size:19px}.intro-cover::before{inset:-7% 0}.intro-cover::after{top:2%}}
+@media (prefers-reduced-motion:no-preference){.plan .cta:hover,.hero-actions .cta:hover{box-shadow:0 3px 12px #53296422}}
+
+#booking-success {
+  width: min(440px, calc(100% - 32px));
+  box-sizing: border-box;
+  padding: clamp(20px, 5vw, 32px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(140deg, var(--paper), var(--lilac));
+  color: var(--ink);
+  text-align: center;
+  box-shadow: 0 18px 60px #28143255;
+}
+#booking-success h2 { margin: 0 0 10px; color: var(--plum); }
+#booking-success p { margin: 0 0 18px; }

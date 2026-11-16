@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 216">
+<defs>
+<filter id="puff" x="-9%" y="-30%" width="118%" height="165%" color-interpolation-filters="sRGB">
+<feGaussianBlur in="SourceAlpha" stdDeviation="4" result="bump"/>
+<feSpecularLighting in="bump" surfaceScale="7" specularConstant="1.25" specularExponent="20" lighting-color="#fffef3" result="shine"><fePointLight x="130" y="-95" z="130"/></feSpecularLighting>
+<feComposite in="shine" in2="SourceAlpha" operator="in" result="gloss"/>
+<feComposite in="SourceGraphic" in2="gloss" operator="arithmetic" k2="1" k3="1" result="face"/>
+<feDropShadow in="face" dx="0" dy="4" stdDeviation="4" flood-color="#78476b" flood-opacity=".28"/>
+</filter>
+<linearGradient id="lemon" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#ffef86"/><stop offset=".42" stop-color="#fff29b"/><stop offset=".75" stop-color="#ffe372"/><stop offset="1" stop-color="#dca947"/></linearGradient>
+</defs>
+<g fill="none" stroke="url(#lemon)" stroke-width="19" stroke-linecap="round" stroke-linejoin="round" filter="url(#puff)">
+<!-- Мишаткина -->
+<path d="M17 94 Q18 61 25 23 Q43 38 49 67 Q63 33 77 22 Q84 60 86 93"/>
+<path d="M110 48 Q105 79 113 91 Q126 105 148 51 L147 93"/>
+<path d="M172 48 Q168 79 174 91 Q181 99 190 90 Q198 78 198 49 M198 78 Q202 104 217 91 Q228 76 226 48"/>
+<path d="M280 56 C262 37 240 57 246 80 C251 101 276 100 282 75 M282 50 Q277 80 287 94"/>
+<path d="M302 52 Q324 49 343 50 M324 51 Q321 76 324 93"/>
+<path d="M361 48 Q357 74 361 94 M397 47 Q386 67 362 71 Q388 77 401 94"/>
+<path d="M421 48 Q415 80 423 92 Q437 104 457 51 L456 93"/>
+<path d="M480 49 Q477 72 481 94 M516 48 Q512 74 517 94 M482 71 Q499 66 514 72"/>
+<path d="M573 56 C555 37 533 57 539 80 C544 101 569 100 575 75 M575 50 Q570 80 580 94"/>
+<!-- вата -->
+<g transform="translate(135 103) scale(1.42 1.04)">
+<path d="M16 93 Q10 63 17 48 C44 34 63 57 22 69 C66 61 66 98 16 93"/>
+<path d="M106 56 C88 37 66 57 72 80 C77 101 102 100 108 75 M108 50 Q103 80 113 94"/>
+<path d="M128 52 Q150 49 169 50 M150 51 Q147 76 150 93"/>
+<path d="M213 56 C195 37 173 57 179 80 C184 101 209 100 215 75 M215 50 Q210 80 220 94"/>
+</g>
+</g>
+</svg>
